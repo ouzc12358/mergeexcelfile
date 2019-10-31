@@ -18,7 +18,7 @@ If ini = 0 Then
 Wb.Sheets(1).Range(Wb.Sheets(1).Cells(1, 1), Wb.Sheets(1).Cells(1, Wb.Sheets(1).UsedRange.Columns.Count)).Copy .Cells(1, 1)
 ini = 1
 End If
-For G = 1 To Sheets.Count
+For G = 2 To Sheets.Count
 Wb.Sheets(G).Range(Wb.Sheets(G).Cells(1, 1), Wb.Sheets(G).Cells(Wb.Sheets(G).UsedRange.Rows.Count, Wb.Sheets(G).UsedRange.Columns.Count)).Copy .Cells(.Range("A65536").End(xlUp).Row + 1, 1)
 Next
 WbN = WbN & Chr(13) & Wb.Name
